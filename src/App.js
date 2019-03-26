@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import BaseRoutes from './routes/router';
+import { BrowserRouter as Router } from 'react-router-dom';
+import BaseRoutes from './routes/routes';
+
 
 class App extends Component {
   render() {
     return (
-      <div>
-          <BaseRoutes />
-      </div>
+      <Router>
+        <BaseRoutes/>
+      </Router>
     );
   }
 }
