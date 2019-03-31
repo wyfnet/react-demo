@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Timer from '../components/Timer/Timer';
 
 class Home extends Component {
-  state = {}
   render() {
+    const { title } = this.props;
     return ( 
       <div>
-        <h1>这里是首页</h1>
         <Timer />
+        <h1>{ title }</h1>
       </div>
     );
   }

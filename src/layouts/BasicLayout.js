@@ -2,27 +2,27 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
-import './BasicLayout.css';
+import './BasicLayout.scss';
 
 class BasicLayout extends Component {
   state = {  }
   render() { 
+    const { children } = this.props;
     return ( 
-      <div className="container">
+      <div className="main">
         <Header></Header>
         <div id="content">
-          { this.props.children }
+          <div className="container">
+            <div className="content">
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              { children }
+            </div>
+          </div>
         </div>
         <Footer></Footer>
-        {/* <br/>
-        <Link to="/">首页</Link>
-        <br/>
-        <Link to="/other">其他页</Link>
-        <br/>
-        <Link to="/user">用户页面</Link>
-        <br/>
-        <Link to={{pathname: "/detail/88888",search: "?abc=1234"}}>详情页</Link>
-        <hr/> */}
       </div>
     );
   }
