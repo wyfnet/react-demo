@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import store from '../store';
+import Profile from './Profile';
+import Update from './Update';
 
 class User extends Component {
   logout() {
@@ -19,6 +21,10 @@ class User extends Component {
         <br/>
         <Link to="/user/profile">个人资料页面</Link>
         <Link to="/user/set">个人资料修改页面</Link>
+        <Switch>
+          <Route path="/user/profile" component={Profile} />
+          <Route path="/user/set" component={Update} />
+        </Switch>
         {this.props.children}
       </div>
     );

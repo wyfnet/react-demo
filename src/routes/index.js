@@ -14,13 +14,9 @@ class BasicApp extends Component {
       <BasicLayout>
         <Switch>
           <Route exact path="/" render={ props => <Home {...props} title="首页" /> } />
-          <Route path="/digital_albuum" render={ props => <Test {...props} title="数字专辑" /> } />
           <Route path="/playlist" render={ props => <Test {...props} title="歌单" /> } />
           <Route path="/album" render={ props => <Test {...props} title="专辑" /> } />
           <Route path="/singer" render={ props => <Test {...props} title="歌手" /> } />
-          <Route path="/crbt" render={ props => <Test {...props} title="彩铃" /> } />
-          <Route path="/topic" render={ props => <Test {...props} title="专题" /> } />
-          <Route path="/musician" render={ props => <Test {...props} title="音乐人" /> } />
           <Route path="/login" render={ props => <Login {...props} title="登录" /> } />
           <Auth path="/user" component={User}/>
           <Route component={NotFound} />
