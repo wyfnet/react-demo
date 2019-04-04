@@ -13,7 +13,7 @@ class Header extends Component {
             <li><Link to="/playlist">歌单</Link></li>
             <li><Link to="/album">专辑</Link></li>
             <li><Link to="/singer">歌手</Link></li>
-            <li><Link to="/user">用户</Link></li>
+            <li><Link to="/login">登录</Link></li>
           </ul>
         </div>
       </div>

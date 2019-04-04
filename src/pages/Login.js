@@ -7,7 +7,6 @@ class Login extends Component {
       type: 'SET_LOGGED_USER',
       isLogin: true
     });
-    console.log(this.props);
     this.props.history.push('/');
   }
   render() { 
